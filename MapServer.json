@@ -1,0 +1,51 @@
+﻿{
+  "scopeName": "source.mapserver",
+  "name": "MapServer",
+  "fileTypes": [
+    "map"
+  ],
+  "patterns": [
+    {
+      "match": "\\b([0-9]+\\.?[0-9]*)\\b",
+      "name": "constant.numeric.mapserver"
+    },
+    {
+      "match": "\\b(NAME|CONNECTIONTYPE|TYPE|PLUGIN|CONNECTION|DATA|HEADER|TEMPLATE|FOOTER|SIZE|EXTENT|DRIVER|MIMETYPE|FORMATOPTION)\\b",
+      "name": "support.class.mapserver"
+    },
+    {
+      "match": "\\b(COLOR|OUTLINECOLOR|MINSCALEDENOM|MAXSCALEDENOM|ENCODING|FILLED|WIDTH|IMAGE|IMAGETYPE|ANCHORPOINT|PROCESSING)\\b",
+      "name": "support.class.mapserver"
+    },
+    {
+      "match": "\\b(MAP|WEB|FONTSET|PROJECTION|OUTPUTFORMAT|METADATA|LAYER|CLASS|STYLE|SYMBOL|POINTS|END)\\b",
+      "name": "keyword.mapserver"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "#",
+          "end": "$",
+          "name": "comment.line.mapserver"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.mapserver"
+        }
+      ]
+    }
+  }
+}
